@@ -42,7 +42,7 @@ export class PrivateChannel {
      * @return {string}
      */
     protected authHost(socket: any): string {
-        let referer: Object = url.parse(socket.request.headers.referer);
+        let referer: any = url.parse(socket.request.headers.referer);
         let authHostSelected: string = 'http://localhost';
         let authHosts: any = (this.options.authHost) ?
             this.options.authHost : this.options.host;
